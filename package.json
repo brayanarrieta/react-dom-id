@@ -1,0 +1,22 @@
+{
+  "name": "react-dom-id",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brayanarrieta/react-dom-id.git"
+  },
+  "author": "Brayan Arrieta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brayanarrieta/react-dom-id/issues"
+  },
+  "homepage": "https://github.com/brayanarrieta/react-dom-id#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}

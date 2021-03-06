@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "jsx": "react",
+      "types": [],
+      "outDir": "dist"
+    },
+    
+    "include": ["src"],
+    "exclude": ["node_modules", "**/*.test.*", "dist"]
+  }
