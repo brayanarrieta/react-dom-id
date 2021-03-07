@@ -5,7 +5,7 @@
       "strict": true,
       "esModuleInterop": true,
       "jsx": "react",
-      "types": [],
+      "types": ["jest"],
       "outDir": "dist"
     },
     

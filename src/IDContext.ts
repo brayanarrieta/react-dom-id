@@ -6,7 +6,7 @@ const ids: String[] = [];
 
 export default React.createContext({
   generateID(namespace:string) {
-    const namespaceContext = namespace ?? getGlobalNamespace();
+    const namespaceContext = namespace || getGlobalNamespace();
     const id = idGenerator();
     const generatedId = `${namespaceContext}-${id}`;
     ids.push(generatedId);

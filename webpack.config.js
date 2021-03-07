@@ -8,10 +8,11 @@ module.exports = {
     filename: 'index.js',
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', '.tsx'],
   },
   externals: {
     react: 'React',
+    'react-dom': 'ReactDOM',
   },
 
   module: {
