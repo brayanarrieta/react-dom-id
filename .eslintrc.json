@@ -1,8 +1,7 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "node": true
+        "es2021": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -20,10 +19,22 @@
         "react",
         "@typescript-eslint"
     ],
-    "rules": {},
+    "rules": {
+        "import/extensions": "off"
+    },
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
         }
     }
 }
