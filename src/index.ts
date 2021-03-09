@@ -1,3 +1,7 @@
 import useComponentIdGenerator from './useComponentIdGenerator';
+import idGenerator from './idGenerator';
 
-export default useComponentIdGenerator;
+export default {
+  idGenerator,
+  useComponentIdGenerator,
+};
