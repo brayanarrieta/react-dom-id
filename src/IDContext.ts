@@ -1,14 +1,11 @@
 import React from 'react';
-import { getGlobalNamespace } from './setGlobalNamespace';
-import generateId from './helpers/idGenerator';
+import idGenerator from './idGenerator';
 
 const ids: String[] = [];
 
 export default React.createContext({
   generateID(namespace:string) {
-    const namespaceContext = namespace || getGlobalNamespace();
-    const id = generateId();
-    const generatedId = `${namespaceContext}-${id}`;
+    const generatedId = idGenerator(namespace);
     ids.push(generatedId);
     return generatedId;
   },
