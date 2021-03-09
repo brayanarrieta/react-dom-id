@@ -2,7 +2,10 @@
   "name": "react-dom-id",
   "version": "1.0.0",
   "description": "React hook and helper for generating an unique component id",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "webpack",
     "lint": "eslint . --ext .ts",
