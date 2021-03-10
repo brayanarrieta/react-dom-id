@@ -25,6 +25,12 @@
     "url": "https://github.com/brayanarrieta/react-dom-id/issues"
   },
   "homepage": "https://github.com/brayanarrieta/react-dom-id#readme",
+  "keywords": [
+    "react",
+    "key",
+    "react-id",
+    "dom-id"
+  ],
   "devDependencies": {
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
