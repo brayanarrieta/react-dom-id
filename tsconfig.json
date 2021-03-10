@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-      "target": "esnext",
       "moduleResolution": "node",
       "strict": true,
       "esModuleInterop": true,
       "jsx": "react",
       "types": ["jest"],
-      "outDir": "dist"
+      "outDir": "dist",
+      "lib": ["es2016"],
+      "sourceMap": true
     },
     
     "include": ["src"],
