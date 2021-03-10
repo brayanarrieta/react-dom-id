@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
   entry: './src/index.ts',
   output: {
+    library: 'ReactDomId',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
   },
@@ -11,7 +12,12 @@ module.exports = {
     extensions: ['.ts', '.tsx'],
   },
   externals: {
-    react: 'React',
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
     'react-dom': 'ReactDOM',
   },
 
