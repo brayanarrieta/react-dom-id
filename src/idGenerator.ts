@@ -1,9 +1,4 @@
-import generateId from './helpers/idHelpers';
-import { getGlobalNamespace } from './helpers/globalNamespaceHelpers';
+import { generateId } from './helpers';
 
-const idGenerator = (namespace = 'app'): string => {
-  const namespaceContext = namespace || getGlobalNamespace();
-  const id = generateId();
-  return `${namespaceContext}-${id}`;
-};
+const idGenerator = (namespace?: string): string => generateId(namespace);
 export default idGenerator;
