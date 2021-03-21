@@ -1,15 +1,15 @@
 import React from 'react';
-import IDContext from './IDContext';
+import IdNamespaceCounterContext from './IdNamespaceCounterContext';
 
-const useComponentIdGenerator = (namespace = 'app') => {
-  const [id, setID] = React.useState<string | null>(null);
-  const { generateID, clearID } = React.useContext(IDContext);
+const useComponentIdGenerator = (namespace?: string) => {
+  const [id, setId] = React.useState<string | null>(null);
+  const { generateId, clearId } = React.useContext(IdNamespaceCounterContext);
 
   React.useEffect(() => {
-    const newID = generateID(namespace);
-    setID(newID);
-    return () => clearID(newID);
-  }, [namespace, generateID, clearID]);
+    const newId = generateId(namespace);
+    setId(newId);
+    return () => clearId(newId);
+  }, [namespace, generateId, clearId]);
 
   return id;
 };
