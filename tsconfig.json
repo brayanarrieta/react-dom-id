@@ -7,7 +7,7 @@
       "types": ["jest"],
       "outDir": "dist",
       "lib": ["es2016"],
-      "sourceMap": true
+      "sourceMap": false
     },
     
     "include": ["src"],
