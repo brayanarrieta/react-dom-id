@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/brayanarrieta/react-dom-id/compare/v2.1.0...v2.2.0) (2022-03-14)
+
+
+### Features
+
+* add new withUseIdContext HOC feature ([0b955d5](https://github.com/brayanarrieta/react-dom-id/commit/0b955d582887476a678cf72f86195c6d0e803db1))
+
 # [2.1.0](https://github.com/brayanarrieta/react-dom-id/compare/v2.0.0...v2.1.0) (2022-03-14)
 
 
