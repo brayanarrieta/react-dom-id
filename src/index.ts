@@ -1,7 +1,3 @@
-import useComponentIdGenerator from './useComponentIdGenerator';
-import idGenerator from './idGenerator';
+import useId from './hooks/useId';
 
-export {
-  idGenerator,
-  useComponentIdGenerator,
-};
+export { useId };
