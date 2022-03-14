@@ -8,4 +8,4 @@
 
 ### BREAKING CHANGES
 
-* The methods were removed
+* The useComponentIdGenerator hook and the idGenerator method were removed
