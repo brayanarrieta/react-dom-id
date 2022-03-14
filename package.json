@@ -1,25 +1,33 @@
 {
   "name": "react-dom-id",
   "version": "1.0.4",
-  "description": "React hook and helper for generating an unique component id",
-  "main": "dist/index.js",
+  "description": "React hooks and HOC to generate unique and deterministic ids for React components",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "cjs": "dist/cjs/index.js",
+  "esm": "dist/esm/index.js",
+  "es": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
-    "dist/"
+    "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc",
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "test": "jest --detectOpenHandles",
-    "test:coverage": "jest --collectCoverage"
+    "commit": "cz",
+    "test": "jest",
+    "test:coverage": "jest --collectCoverage",
+    "clean": "del ./dist/*",
+    "lint": "eslint --ext=.tsx,.ts  .",
+    "lint:fix": "eslint --ext=.tsx,.ts . --fix",
+    "build:ts": "rollup -c",
+    "build:types": "tsc",
+    "build": "npm run clean && npm run build:types && npm run build:ts",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brayanarrieta/react-dom-id.git"
   },
-  "author": "Brayan Arrieta",
+  "author": "brayanarrieta",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brayanarrieta/react-dom-id/issues"
@@ -27,28 +35,47 @@
   "homepage": "https://github.com/brayanarrieta/react-dom-id#readme",
   "keywords": [
     "react",
+    "component",
     "key",
-    "react-id",
-    "dom-id"
+    "hooks",
+    "dom-id",
+    "unique"
   ],
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@saithodev/semantic-release-backmerge": "^2.1.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@testing-library/react": "^11.2.5",
-    "@types/jest": "^26.0.20",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^26.0.24",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^16.8.0",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^4.0.1",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.6.3",
     "jest-config": "^26.6.3",
-    "react": "^16.8.0",
+    "react": "^16.12.0",
     "react-dom": "^16.8.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "semantic-release": "^19.0.2",
     "ts-jest": "^26.5.3",
     "ts-loader": "^8.0.17",
     "typescript": "^4.2.3",
@@ -56,7 +83,12 @@
     "webpack-cli": "^4.5.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.12.0 || ^17"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

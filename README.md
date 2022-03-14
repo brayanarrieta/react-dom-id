@@ -1,27 +1,32 @@
-# React-Dom-Id
+# react-dom-id
 
-Simple helper and hook to generate id for the react components
-
-TODO:
-
-- Add better documentation
-
+Library to generate unique and deterministic ids for React components.
 ## Install
 
-```bash
+### NPM
+
+```
 npm i --save react-dom-id
+```
+
+### Yarn
+
+```
+yarn add react-dom-id
 ```
 
 ## Usage
 
-### Hook (React functional components)
+### useId Hook (React Functional Components)
+
+**Hook** that returns a unique and deterministic id per component or element.
 
 ```javascript
 import React from "react";
-import { useComponentIdGenerator } from "react-dom-id";
+import { useId } from "react-dom-id";
 
 const RadioButton = ({ children, ...rest }) => {
-  const radioButtonId = useComponentIdGenerator();
+  const radioButtonId = useId('my-prefix');
 
   return (
     <div>
@@ -31,23 +36,10 @@ const RadioButton = ({ children, ...rest }) => {
   );
 };
 ```
+## API
 
-### Helper (React class components)
+### useId(namespacePrefix?: string | undefined): string | null;
 
-```javascript
-import React from "react";
-import { idGenerator } from "react-dom-id";
-
-class RadioButton extends React.Component {
-  render() {
-    const radioButtonId = idGenerator();
-    return (
-    <div>
-      <label htmlFor={radioButtonId}>{children}</label>
-      <input id={radioButtonId} type="radio" {...rest} />
-    </div>
-  );
-  }
-}
-```
-
+| **Arguments**   | **Type** | **Required?** | **Default** | **Description**                          |
+|-----------------|----------|---------------|-------------|------------------------------------------|
+| namespacePrefix | string   | No            | app         | Allows provide a custom namespace prefix |

@@ -13,7 +13,7 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
@@ -21,24 +21,15 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "import/extensions": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+        "import/prefer-default-export": "off",
+        "no-shadow": "off",
+        "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" } ],
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-        "import/prefer-default-export": "off"
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
     },
     "settings": {
-        "react": {
-            "version": "detect"
-        },
         "import/resolver": {
-            "node": {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
-            }
+            "typescript": {}
         }
     }
 }
