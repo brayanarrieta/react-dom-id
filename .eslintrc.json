@@ -25,7 +25,8 @@
         "no-shadow": "off",
         "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" } ],
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "react/function-component-definition": "off"
     },
     "settings": {
         "import/resolver": {

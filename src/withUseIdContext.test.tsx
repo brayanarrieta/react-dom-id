@@ -5,7 +5,6 @@ import { resetIdsContext } from './context/IdsContext';
 
 const generateMockComponent = (
   namespace?: string,
-// eslint-disable-next-line react/function-component-definition
 ) => (props: {useIdContext: { generateId: any }}) => {
   const { useIdContext } = props;
   const { generateId } = useIdContext;
